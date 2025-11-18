@@ -1,0 +1,148 @@
+{
+  "app": {
+    "title": "የኢትዮጵያ ጨረታ ስርዓት",
+    "name": "የኢትዮጵያ ጨረታ"
+  },
+  "nav": {
+    "tenders": "ጨረቶች",
+    "results": "ውጤቶች",
+    "admin": "አስተዳዳሪ",
+    "login": "መግቢያ",
+    "register": "መመዝገብ",
+    "logout": "መውጣት",
+    "signingOut": "በመውጣት ላይ…"
+  },
+  "home": {
+    "heading": "የኢትዮጵያ ጨረታ ስርዓት",
+    "subheading": "ጨረቶችን ያትሙ፣ ጨረታ ያስገቡ እና ውጤቶችን በዘመናዊ እና ደህንነቱ የተጠበቀ መድረክ ያገኙ.",
+    "cta": {
+      "browse": "ጨረቶችን ይመልከቱ",
+      "register": "የሻጭ መለያ ይፍጠሩ",
+      "signin": "ይግቡ"
+    },
+    "features": {
+      "deadlineTitle": "ዝቅተኛው ጊዜ 30 ቀን",
+      "deadlineDesc": "ከግብዓት መመሪያ 430/2018 ጋር የሚጣጣም.",
+      "calendarTitle": "የኢትዮጵያ የቀን መቁጠሪያ",
+      "calendarDesc": "ሁለት ቀን ማሳያ ከትክክለኛ መቀየር ጋር.",
+      "currencyTitle": "ብር ምንዛሬ",
+      "currencyDesc": "የቢር ትክክለኛ ቅርጸ ቁጥር እና ድምር.",
+      "securityTitle": "ደህንነቱ የተጠበቀ እና በሚና",
+      "securityDesc": "JWT ማረጋገጫ፣ ሻጭ/አስተዳዳሪ ሚናዎች፣ የፋይል ማረጋገጥ."
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "መግቢያ",
+      "email": "ኢሜይል",
+      "password": "የይለፍ ቃል",
+      "submit": "መግባት",
+      "error": "መግባት አልተሳካም"
+    },
+    "register": {
+      "title": "መመዝገብ",
+      "name": "ስም",
+      "email": "ኢሜይል",
+      "password": "የይለፍ ቃል",
+      "submit": "መለያ መፍጠር",
+      "error": "መመዝገብ አልተሳካም"
+    }
+  },
+  "tenders": {
+    "list": {
+      "title": "ጨረቶች",
+      "searchPlaceholder": "ጨረቶችን ፈልግ...",
+      "openOnly": "ክፍት ብቻ",
+      "empty": "ጨረታ አልተገኘም."
+    },
+    "card": {
+      "status": {
+        "open": "ክፍት",
+        "closed": "ተዘግቷል",
+        "cancelled": "ተሰርዟል"
+      },
+      "estimatedValue": "ግምታዊ እሴት:",
+      "deadline": "ጊዜ መያዣ:",
+      "bidOpening": "የጨረታ መክፈቻ:",
+      "openingLocation": "አካባቢ:"
+    },
+    "detail": {
+      "back": "ወደ ጨረቶች ተመለስ",
+      "status": "ሁኔታ:",
+      "submitLabel": "ጨረታ ፋይል ያስገቡ (PDF, ≤10MB)",
+      "submit": "ጨረታ ማስገባት",
+      "cancelTender": "ጨረታን ሰርዝ",
+      "confirmCancelTitle": "ይህን ጨረታ ልትሰርዙ ትፈልጋለህ/ሽ?",
+      "confirmCancelDesc": "ይህ እርምጃ አይመለስም።",
+      "confirm": "አረጋግጥ",
+      "close": "ዝጋ"
+    }
+  },
+  "results": {
+    "title": "የእኔ ጨረታ ውጤቶች",
+    "table": {
+      "tender": "ጨረታ",
+      "status": "ሁኔታ",
+      "evaluation": "ግምገማ",
+      "submitted": "ተሰጥቷል",
+      "actions": "እርምጃዎች",
+      "pending": "በመጠበቅ ላይ"
+    },
+    "download": "PDF አውርድ",
+    "empty": "ጨረታ ገና አልገባህ/ሽም.",
+    "error": "አውርድ አልተሳካም"
+  },
+  "admin": {
+    "title": "የአስተዳደር ዳሽቦርድ",
+    "stats": {
+      "activeTenders": "ንቁ ጨረቶች",
+      "closedTenders": "የተዘጉ ጨረቶች",
+      "cancelledTenders": "የተሰረዙ ጨረቶች",
+      "totalBids": "ጠቅላላ ጨረታዎች",
+      "pendingEvaluations": "ግምገማዎች በመጠበቅ ላይ",
+      "completedEvaluations": "የተጠናቀቁ ግምገማዎች"
+    },
+    "newTender": {
+      "title": "አዲስ ጨረታ",
+      "fields": {
+        "title": "አርእስት",
+        "description": "መግለጫ",
+        "deadline": "ጊዜ መያዣ"
+      },
+      "hint": {
+        "deadline": "ቢያንስ 30 ቀን ከአሁን ጀምሮ (የግብዓት መመሪያ)"
+      },
+      "create": "ፍጠር"
+    },
+    "evaluations": {
+      "title": "ግምገማዎች",
+      "createTitle": "ግምገማ ፍጠር",
+      "fields": {
+        "bidId": "የጨረታ መለያ",
+        "score": "ነጥብ (0-100)",
+        "remarks": "ማብራሪያ"
+      },
+      "listTitle": "ሁሉም ግምገማዎች",
+      "empty": "ግምገማ የለም.",
+      "save": "አስቀምጥ"
+    }
+  },
+  "footer": {
+    "about": "ስለ እኛ",
+    "contact": "እውቂያ",
+    "privacy": "ግላዊነት",
+    "copyright": "© {{year}} የኢትዮጵያ ጨረታ ስርዓት"
+  },
+  "common": {
+    "loading": "በመጫን ላይ…",
+    "error": "ስህተት",
+    "save": "አስቀምጥ",
+    "create": "ፍጠር",
+    "cancel": "ሰርዝ",
+    "submit": "አስገባ",
+    "signin": "መግባት",
+    "signout": "መውጣት",
+    "createAccount": "መለያ መፍጠር",
+    "browseTenders": "ጨረቶችን ይመልከቱ"
+  }
+}

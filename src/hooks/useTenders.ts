@@ -26,8 +26,9 @@ export function useCancelTender() {
   const qc = useQueryClient()
   return useMutation({
     mutationFn: (id: string) => cancelTender(id),
-    onSuccess: () => {
+    onSuccess: (_data, id) => {
       qc.invalidateQueries({ queryKey: qk.tenders.list({}) })
+      if (id) qc.invalidateQueries({ queryKey: qk.tenders.detail(id) })
     },
   })
 }

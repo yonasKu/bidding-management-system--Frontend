@@ -1,0 +1,148 @@
+{
+  "app": {
+    "title": "Ethiopian Bidding System",
+    "name": "Ethiopian Bidding"
+  },
+  "nav": {
+    "tenders": "Tenders",
+    "results": "Results",
+    "admin": "Admin",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "signingOut": "Signing out…"
+  },
+  "home": {
+    "heading": "Ethiopian Bidding System",
+    "subheading": "Publish tenders, submit bids, and evaluate results with a modern, secure, and compliant platform.",
+    "cta": {
+      "browse": "Browse Tenders",
+      "register": "Create Vendor Account",
+      "signin": "Sign in"
+    },
+    "features": {
+      "deadlineTitle": "30‑day minimum deadline",
+      "deadlineDesc": "Compliant with Procurement Directive No. 430/2018.",
+      "calendarTitle": "Ethiopian calendar",
+      "calendarDesc": "Dual date display with accurate conversion.",
+      "currencyTitle": "Birr currency",
+      "currencyDesc": "Precise ETB formatting and totals.",
+      "securityTitle": "Secure & role‑based",
+      "securityDesc": "JWT auth, vendor/admin roles, file validation."
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Sign in",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign in",
+      "error": "Login failed"
+    },
+    "register": {
+      "title": "Create account",
+      "name": "Name",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Create account",
+      "error": "Registration failed"
+    }
+  },
+  "tenders": {
+    "list": {
+      "title": "Tenders",
+      "searchPlaceholder": "Search tenders...",
+      "openOnly": "Open only",
+      "empty": "No tenders found."
+    },
+    "card": {
+      "status": {
+        "open": "OPEN",
+        "closed": "CLOSED",
+        "cancelled": "CANCELLED"
+      },
+      "estimatedValue": "Estimated Value:",
+      "deadline": "Deadline:",
+      "bidOpening": "Bid Opening:",
+      "openingLocation": "Location:"
+    },
+    "detail": {
+      "back": "Back to tenders",
+      "status": "Status:",
+      "submitLabel": "Submit a bid (PDF, ≤10MB)",
+      "submit": "Submit Bid",
+      "cancelTender": "Cancel Tender",
+      "confirmCancelTitle": "Cancel this tender?",
+      "confirmCancelDesc": "This action cannot be undone.",
+      "confirm": "Confirm",
+      "close": "Close"
+    }
+  },
+  "results": {
+    "title": "My Bid Results",
+    "table": {
+      "tender": "Tender",
+      "status": "Status",
+      "evaluation": "Evaluation",
+      "submitted": "Submitted",
+      "actions": "Actions",
+      "pending": "Pending"
+    },
+    "download": "Download PDF",
+    "empty": "You have not submitted any bids yet.",
+    "error": "Failed to download bid"
+  },
+  "admin": {
+    "title": "Admin Dashboard",
+    "stats": {
+      "activeTenders": "Active Tenders",
+      "closedTenders": "Closed Tenders",
+      "cancelledTenders": "Cancelled Tenders",
+      "totalBids": "Total Bids",
+      "pendingEvaluations": "Pending Evaluations",
+      "completedEvaluations": "Completed Evaluations"
+    },
+    "newTender": {
+      "title": "New Tender",
+      "fields": {
+        "title": "Title",
+        "description": "Description",
+        "deadline": "Deadline"
+      },
+      "hint": {
+        "deadline": "Must be at least 30 days from now (Ethiopian Procurement Law)"
+      },
+      "create": "Create"
+    },
+    "evaluations": {
+      "title": "Evaluations",
+      "createTitle": "Create Evaluation",
+      "fields": {
+        "bidId": "Bid ID",
+        "score": "Score (0-100)",
+        "remarks": "Remarks"
+      },
+      "listTitle": "All Evaluations",
+      "empty": "No evaluations yet.",
+      "save": "Save"
+    }
+  },
+  "footer": {
+    "about": "About",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "copyright": "© {{year}} Ethiopian Bidding System"
+  },
+  "common": {
+    "loading": "Loading…",
+    "error": "Error",
+    "save": "Save",
+    "create": "Create",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "signin": "Sign in",
+    "signout": "Logout",
+    "createAccount": "Create account",
+    "browseTenders": "Browse Tenders"
+  }
+}

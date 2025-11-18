@@ -10,11 +10,19 @@ export type Tender = {
 
 export async function listTenders(filters?: Record<string, any>): Promise<Tender[]> {
   const params = filters ? `?${new URLSearchParams(filters as any).toString()}` : ''
-  return apiFetch(`/tenders${params}`)
+  const list = await apiFetch(`/tenders${params}`)
+  return (list as any[]).map((t) => ({
+    ...t,
+    status: (t?.status as string | undefined)?.toLowerCase?.() ?? t?.status,
+  }))
 }
 
 export async function getTender(id: string): Promise<Tender> {
-  return apiFetch(`/tenders/${id}`)
+  const t = await apiFetch(`/tenders/${id}`)
+  return {
+    ...t,
+    status: (t?.status as string | undefined)?.toLowerCase?.() ?? t?.status,
+  }
 }
 
 export async function createTender(payload: { title: string; description?: string }): Promise<Tender> {

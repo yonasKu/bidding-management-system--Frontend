@@ -7,8 +7,10 @@ import { useRouter } from "next/navigation"
 export default function AdminGuard({ children }: { children: ReactNode }) {
   const router = useRouter()
   const { data: user, isPending, isError } = useAuthMe()
+  console.log('AdminGuard state', { user, isPending, isError })
 
   useEffect(() => {
+    console.log('AdminGuard effect', { user, isPending, isError })
     if (isError || (!user && !isPending)) {
       router.replace("/login")
     } else if (user && user.role !== "admin") {
