@@ -31,13 +31,20 @@ export default function Navbar() {
           <Link href="/tenders" className={linkClass("/tenders")}>
             Tenders
           </Link>
-          <Link href="/results" className={linkClass("/results")}>
-            Results
-          </Link>
-          {user?.role === "admin" && (
-            <Link href="/admin" className={linkClass("/admin")}>
-              Admin
+          {user && user.role !== "admin" && (
+            <Link href="/results" className={linkClass("/results")}>
+              Results
             </Link>
+          )}
+          {user?.role === "admin" && (
+            <>
+              <Link href="/admin" className={linkClass("/admin")}>
+                Admin
+              </Link>
+              <Link href="/admin/reports" className={linkClass("/admin/reports")}>
+                Reports
+              </Link>
+            </>
           )}
         </div>
         <div className="flex items-center gap-3">
@@ -45,6 +52,9 @@ export default function Navbar() {
           {user ? (
             <>
               <span className="text-sm text-muted-foreground">{user.email}</span>
+              <Link href="/settings" className={linkClass("/settings")}>
+                Settings
+              </Link>
               <Button size="sm" variant="outline" onClick={onLogout} disabled={isPending}>
                 {isPending && <LoadingIcon />}
                 {isPending ? "Signing out…" : "Logout"}

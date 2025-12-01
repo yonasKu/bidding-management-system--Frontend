@@ -7,8 +7,18 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { useToast } from "@/components/ui/toast"
+import { useAuthMe } from "@/hooks/useAuth"
+import { useEffect } from "react"
+import { useRouter } from "next/navigation"
 
 export default function Page() {
+  const router = useRouter()
+  const { data: user } = useAuthMe()
+  useEffect(() => {
+    if (user?.role === 'admin') {
+      router.replace('/admin')
+    }
+  }, [user, router])
   const { data, isPending, isError, error } = useMyBids()
   const { toast } = useToast()
 

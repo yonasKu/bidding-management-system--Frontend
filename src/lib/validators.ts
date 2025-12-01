@@ -19,6 +19,7 @@ export const createTenderSchema = z.object({
 
 export const evaluationSchema = z.object({
   bidId: z.string().min(1, 'Bid ID is required'),
-  score: z.number().min(0).max(100),
+  technicalScore: z.number().min(0).max(70),
+  financialScore: z.number().min(0).max(30),
   remarks: z.string().optional(),
 })

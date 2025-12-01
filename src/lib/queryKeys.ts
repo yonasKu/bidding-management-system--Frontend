@@ -2,6 +2,9 @@ export const qk = {
   auth: {
     me: ["auth", "me"] as const,
   },
+  account: {
+    me: ["account", "me"] as const,
+  },
   tenders: {
     list: (filters?: Record<string, any>) => ["tenders", "list", filters ?? {}] as const,
     detail: (id: string) => ["tenders", "detail", id] as const,
@@ -12,5 +15,11 @@ export const qk = {
   },
   evaluations: {
     list: ["evaluations", "list"] as const,
+  },
+  results: {
+    byTender: (tenderId: string) => ["results", "byTender", tenderId] as const,
+  },
+  reports: {
+    summary: (range?: string) => ["reports", "summary", range ?? "all"] as const,
   },
 };

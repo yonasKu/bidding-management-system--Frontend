@@ -17,7 +17,7 @@ export default function Page() {
   const { data, isPending, isError, error } = useEvaluationsList()
   const form = useForm<z.infer<typeof evaluationSchema>>({
     resolver: zodResolver(evaluationSchema),
-    defaultValues: { bidId: "", score: 0, remarks: "" },
+    defaultValues: { bidId: "", technicalScore: 0, financialScore: 0, remarks: "" },
     mode: "onChange",
   })
   const { mutateAsync, isPending: isSubmitting, error: submitError } = useCreateEvaluation()
@@ -25,7 +25,7 @@ export default function Page() {
 
   async function onSubmit(values: z.infer<typeof evaluationSchema>) {
     await mutateAsync(values)
-    form.reset({ bidId: "", score: 0, remarks: "" })
+    form.reset({ bidId: "", technicalScore: 0, financialScore: 0, remarks: "" })
     toast({ title: "Success", description: "Evaluation created" })
   }
 
@@ -66,29 +66,35 @@ export default function Page() {
                       </FormItem>
                     )}
                   />
-                  <FormField
-                    control={form.control}
-                    name="score"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Score (0-100)</FormLabel>
-                        <FormControl>
-                          <Input
-                            type="number"
-                            min={0}
-                            max={100}
-                            step={1}
-                            value={field.value ?? 0}
-                            onChange={(e) => {
-                              const v = e.currentTarget.valueAsNumber
-                              field.onChange(Number.isNaN(v) ? 0 : v)
-                            }}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <FormField
+                      control={form.control}
+                      name="technicalScore"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Technical Score (0-70)</FormLabel>
+                          <FormControl>
+                            <Input type="number" min={0} max={70} placeholder="0-70" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="financialScore"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Financial Score (0-30)</FormLabel>
+                          <FormControl>
+                            <Input type="number" min={0} max={30} placeholder="0-30" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+                  <p className="text-xs text-muted-foreground">Total preview: {Math.round((form.watch("technicalScore") || 0) + (form.watch("financialScore") || 0))} / 100</p>
                   <FormField
                     control={form.control}
                     name="remarks"

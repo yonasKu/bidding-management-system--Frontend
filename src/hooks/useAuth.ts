@@ -32,8 +32,10 @@ export function useLogout() {
   const qc = useQueryClient()
   return useMutation({
     mutationFn: logout,
-    onSuccess: () => {
-      qc.invalidateQueries({ queryKey: qk.auth.me })
+    onSuccess: async () => {
+      // Remove cached user immediately so UI (navbar) reflects logged-out state without reload
+      await qc.cancelQueries({ queryKey: qk.auth.me })
+      qc.removeQueries({ queryKey: qk.auth.me })
     },
   })
 }
